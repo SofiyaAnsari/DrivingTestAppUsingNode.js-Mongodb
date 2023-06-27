@@ -1,0 +1,98 @@
+
+<%- include('partials/header'); -%>
+<body id="g1">
+<%- include('partials/navbar'); -%>
+<h3>G Test - get Licence Details</h3>
+
+<form method="post">
+    <div class="form-group mt-3">
+        <label for="LicenseNo">License Number</label>
+        <input type="text" class="form-control mt-2" id="LicenseNo"
+        name="LicenseNo" placeholder="License Number" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Retrieve Data</button>
+</form>
+
+<div class="mt-4">
+      <div class="container">
+<form method="post" action="update/gTest">
+    <h3>Personal Information</h3>
+    <hr>
+    <div class="row">
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="firstname">First Name:</label>
+            <input type="text" class="form-control mt-2"
+            name="firstname" value="<%=userData.firstname%>" placeholder="Enter first name" disabled>
+        </div>
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="lastname">Last Name:</label>
+            <input type="text" class="form-control mt-2" value="<%=userData.lastname%>" id="lastname" 
+            name="lastname" placeholder="Enter last name" disabled>
+        </div>
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="LicenseNo">License Number:</label>
+            <input type="text" class="form-control mt-2" id="LicenseNo" 
+           name="LicenseNo" value="<%=userData.LicenseNo%>" placeholder="Enter license number" disabled>
+           <input type="text" class="form-control mt-2" id="LicenseNo" 
+           name="LicenseNo" value="<%=userData.LicenseNo%>" placeholder="Enter license number" hidden>
+        </div>
+        <div class="form-group mt-3 col-12 col-md-6 col-lg-4">
+            <label for="Age">Age:</label>
+            <input type="number" class="form-control mt-2" id="Age"
+            name="Age" value="<%=userData.Age%>" placeholder="Enter age" disabled>
+        </div>
+     
+    </div>
+
+    <h3 class="mt-4">Car Information</h3>
+    <hr>
+    <div class="row">
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="make">Make:</label>
+            <input type="text" class="form-control mt-2" id="make"
+            name="make" value="<%=userData.car_details.make%>" placeholder="Enter car make" required>
+        </div>
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="model">Model:</label>
+            <input type="text" class="form-control mt-2" id="model"
+            name="model" value="<%=userData.car_details.model%>" placeholder="Enter car model" required>
+        </div>
+        <div class="form-group col-12 col-md-6 col-lg-4">
+            <label for="year">Year:</label>
+            <input type="number" class="form-control mt-2" id="year"
+            name="year" value="<%=userData.car_details.year%>" placeholder="Enter car year" required>
+        </div>
+        <div class="form-group col-12 col-md-6 col-lg-4 mt-3">
+            <label for="platno">Plate Number:</label>
+            <input type="text" class="form-control mt-2" id="platno"
+            name="platno" value="<%=userData.car_details.platno%>" placeholder="Enter plate number" required>
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+</div>
+</div>
+<!-- 
+<% if (typeof data !== 'undefined') { %>
+  <h1>Record:</h1>
+  <form>
+   
+    <% for (const key in data) { %>
+     
+       
+          <label><%= key %></label>
+          <input type="text" value="<%= data[key] %>"><br>
+      
+      <% } %>
+    
+  </form>
+<% } else { %>
+  <h1>No record found</h1>
+<% } %> -->
+    
+
+<%- include('partials/footer'); -%>
+
+</body>

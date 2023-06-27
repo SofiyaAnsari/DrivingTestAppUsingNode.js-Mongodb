@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcomr from car heaven</h1>
+    <table border="5" width="100%">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Car Name</th>
+            <th>Car Model</th>
+            <th>Price</th>
+            <th>type</th>
+        </tr>
+        <% for(var i=0;i<data.length;i++) { %>
+
+<tr>
+<td><%=data[i].fname %></td>
+<td><%=data[i].lname %></td>
+<td><%=data[i].age %></td>
+<td><%=data[i].dob %></td>
+<td><%=data[i].lnumber %></td>
+<td><%=data[i].make %></td>
+<td><%=data[i].model %></td>
+<td><%=data[i].year %></td>
+
+
+</tr>
+
+       <% } %>
+    </table>
+</body>
+</html>
